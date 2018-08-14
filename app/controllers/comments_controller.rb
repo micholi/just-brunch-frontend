@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
       render json: @comment
     # else
       # figure out how to handle errors
+    end
   end
 
   def edit
@@ -31,6 +32,7 @@ class CommentsController < ApplicationController
       render json: @comment
     # else
       # figure out how to handle errors
+    end
   end
 
   def destroy
@@ -47,6 +49,6 @@ class CommentsController < ApplicationController
     end
 
     def set_restaurant
-      @restaurant = Restaurant.find_by(id: params[:id])
+      @restaurant = Restaurant.find_by(id: params[:restaurant_id])
     end
 end

@@ -31,6 +31,7 @@ class RestaurantsController < ApplicationController
       render json: @restaurant
     # else
       # figure out how to handle error messages
+    end
   end
 
   def destroy
