@@ -1,12 +1,10 @@
-export const setRestaurants = restaurants => {
-  return {
-    type: 'GET_RESTAURANTS'
-    restaurants
-  }
-}
+import fetch from 'isomorphic-fetch';
 
 export const fetchRestaurants = () => {
-  return dispatch => {
-    return fetch('nttp://localhost:3001/api/restaurants')
+  return (dispatch) => {
+    dispatch({type: 'LOADING_RESTAURANTS'});
+      return fetch('http://localhost:3001/api/restaurants')
+      .then(resp => resp.json())
+      .then(restaurants => dispatch({type: 'GET_RESTAURANTS', restaurants}))
   }
 }

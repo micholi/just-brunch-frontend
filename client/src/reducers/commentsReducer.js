@@ -1,4 +1,4 @@
-function commentsReducer(state = {comments: []}, action) => {
+export default (state={comments: []}, action) => {
 
   switch(action.type) {
     case 'GET_COMMENTS':
