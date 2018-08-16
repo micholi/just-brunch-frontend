@@ -4,9 +4,9 @@ import RestaurantCard from './RestaurantCard';
 import { Link } from 'react-router-dom';
 
 const RestaurantsList = ({ restaurants }) => {
-//  addmfunction to sort alphabetically?
+//  add function to sort alphabetically?
 
-  const renderRestaurants = restaurants.restaurants.map(restaurant =>
+  const renderRestaurants = restaurants.map(restaurant =>
      <RestaurantCard key={restaurant.id} restaurant={restaurant} />
   );
 

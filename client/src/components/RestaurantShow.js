@@ -26,7 +26,7 @@ class RestaurantShow extends React.Component {
 
 // correctly displays restaurant when clicking on link, but not when manually updating the url
 const mapStateToProps = (state, ownProps) => {
-  const restaurant = state.restaurants.restaurants.find(restaurant => restaurant.id === parseInt(ownProps.match.params.id, 10))
+  const restaurant = state.restaurants.find(restaurant => restaurant.id === parseInt(ownProps.match.params.id, 10))
     return restaurant ? { restaurant } : {restaurant: {} };
 
   return ({

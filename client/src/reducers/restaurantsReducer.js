@@ -1,13 +1,11 @@
-export default (state =
-  {restaurants: []
-}, action) => {
+export default (state = [], action) => {
+  switch(action.type) {
 
-  switch (action.type) {
     case 'LOADING_RESTAURANTS':
       return state
 
     case 'FETCH_RESTAURANTS':
-      return {restaurants: action.restaurants}
+      return action.restaurants
 
     case 'GET_RESTAURANT':
       return { restaurant: action.restaurant }
