@@ -21,17 +21,6 @@ export const removeRestaurant = restaurant => {
   }
 }
 
-/*
-export const fetchRestaurants = () => {
-  return (dispatch) => {
-    dispatch({type: 'LOADING_RESTAURANTS'});
-      return fetch(`${API_URL}/restaurants`)
-      .then(resp => resp.json())
-      .then(restaurants => dispatch({type: 'FETCH_RESTAURANTS', payload: restaurants}))
-  }
-}
-*/
-
 export const fetchRestaurants = () => {
   return dispatch => {
     dispatch({type: 'LOADING_RESTAURANTS'});
@@ -41,14 +30,3 @@ export const fetchRestaurants = () => {
       .catch(error => console.log(error))
   }
 }
-
-/*
-export const getRestaurant = (restaurant) => {
-  return (dispatch) => {
-
-      return fetch(`http://localhost:3001/api/restaurants/${restaurant.id}`)
-      .then(resp => resp.json())
-      .then(restaurant => dispatch({type: 'GET_RESTAURANT', restaurant}))
-  }
-}
-*/

@@ -9,8 +9,8 @@ export default (state =
     case 'FETCH_RESTAURANTS':
       return {restaurants: action.restaurants}
 
-    //case 'GET_RESTAURANT':
-    //  return { restaurant: action.restaurant }
+    case 'GET_RESTAURANT':
+      return { restaurant: action.restaurant }
 
     case 'ADD_RESTAURANT':
       return {restaurants: [...state.restaurants, action.restaurant]}

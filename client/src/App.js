@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import RestaurantNew from './components/RestaurantNew';
+import RestaurantShow from './components/RestaurantShow';
 import RestaurantsContainer from './containers/RestaurantsContainer';
+
+//import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
 
@@ -17,6 +20,7 @@ class App extends Component {
         <Route exact path="/new" component={RestaurantNew} />
         <Route exact path="/restaurants" component={RestaurantsContainer} />
 
+        <Route exact path="/restaurants/:id" component={RestaurantShow} />
         </div>
       </Router>
     );
