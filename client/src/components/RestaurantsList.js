@@ -11,8 +11,10 @@ const RestaurantsList = ({ restaurants }) => {
   );
 
     return (
-      <div>
-        {renderRestaurants}
+      <div className="container">
+        <div className="row">
+          {renderRestaurants}
+        </div>
       </div>
     )
 
