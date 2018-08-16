@@ -69,6 +69,7 @@ class RestaurantNew extends Component {
             Neigbhorhood:
               <textarea
                 className="form-control"
+                  style={{width: 150, height: 45}}
                 type="text"
                 name="neighborhood"
                 value={this.state.neighborhood}
@@ -77,19 +78,22 @@ class RestaurantNew extends Component {
           </label><br></br>
           <label>
             Price:
-              <textarea
+              <select
                 className="form-control"
-                type="text"
+
                 name="price_range"
-                value={this.state.neighborhood}
+                value={this.state.price_range}
                 onChange={this.handleOnChange}
-                />
+                >
+                <option value="inexpensive">Inexpensive</option>
+                <option value="moderate">Moderate</option>
+                <option value="pricey">Pricey</option>
+                </select>
           </label><br></br>
           <label>
             Dress Code:
               <textarea
                 className="form-control"
-                style={{width: 150, height: 45}}
                 type="text"
                 name="dress_code"
                 placeholder="Dress Code"
