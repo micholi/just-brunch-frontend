@@ -5,34 +5,30 @@ import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from '../components/RestaurantShow';
 import RestaurantNew from '../components/RestaurantNew';
-
+import RestaurantCard from '../components/RestaurantCard';
 
 class RestaurantsContainer extends React.Component {
-
 
   componentDidMount() {
     this.props.fetchRestaurants()
   }
-
 
   render() {
 
     const { restaurants, match } = this.props
 
     return (
+
       <div>
         <Switch>
-
           <Route exact path={match.url} render={() => (
-            <RestaurantsList restaurants={restaurants} />
-          )}/>
-
+              <RestaurantsList restaurants={restaurants} />
+            )}/>
 
           <Route path="/" component={RestaurantShow} />
           <Route path="/new" component={RestaurantNew} />
 
         </Switch>
-
       </div>
 
     )
@@ -40,19 +36,13 @@ class RestaurantsContainer extends React.Component {
 }
 
 
-//const mapStateToProps = (state) => {
-//  return {
-//    restaurants: state.restaurants
-//  }
-//}
-
-//function mapDispatchToProps(dispatch) {
-//  return bindActionCreators({fetchRestaurants: fetchRestaurants}, dispatch)
-//}
-
-//export default connect(mapStateToProps)(RestaurantsContainer)
+const mapStateToProps = (state) => {
+  return {
+    restaurants: state.restaurants
+  }
+}
 
 
-//export default connect(mapStateToProps, {fetchRestaurants})(RestaurantsContainer)
+export default connect(mapStateToProps, { fetchRestaurants })(RestaurantsContainer)
 
-export default connect(state => ({ restaurants: state.restaurants }), {fetchRestaurants})(RestaurantsContainer);
+//export default connect(state => ({ restaurants: state.restaurants }), { fetchRestaurants })(RestaurantsContainer);

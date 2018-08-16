@@ -3,62 +3,19 @@ import { connect } from 'react-redux';
 import RestaurantCard from './RestaurantCard';
 import { Link } from 'react-router-dom';
 
+const RestaurantsList = ({ restaurants }) => {
+//  addmfunction to sort alphabetically?
 
-class RestaurantsList extends React.Component {
-
-/*
-  renderRestaurants = this.props.restaurants.map(restaurant =>
-  <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-)
-*/
-
-/*
-  renderRestaurants = this.props.restaurants.map((restaurant) =>
-    <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-  )
-*/
-
-
-renderRestaurants = () => {
-  return this.props.restaurants.map(restaurant =>
-    <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-  )
-}
-
-
-
-  render() {
-
-/*
-    const renderRestaurants = this.props.restaurants.map(function(restaurant) {
-      return (
-        <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-      );
-    });
-*/
-
-/*
-  const renderRestaurants = () => {
-    return this.props.restaurants.map(restaurant =>
-      <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-    )
-  }
-*/
+  const renderRestaurants = restaurants.restaurants.map(restaurant =>
+     <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+  );
 
     return (
       <div>
-        {this.renderRestaurants()}
+        {renderRestaurants}
       </div>
     )
 
-  }
 }
 
-
-const mapStateToProps = state => {
-  return {
-    restaurants: state.restaurants
-  }
-}
-
-export default connect(mapStateToProps)(RestaurantsList);
+export default RestaurantsList;

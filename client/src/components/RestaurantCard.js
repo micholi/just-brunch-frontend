@@ -1,20 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+class RestaurantCard extends Component {
 
-const RestaurantCard = (props) => {
-  const {name, cuisine, neighborhood} = this.props
+  render() {
 
-  return (
-    <div>
-      <h1>This is a test</h1>
-      <h3>{name}</h3>
-      <p>Cuisine: {cuisine}</p>
-      <p>Neighborhood: {neighborhood}</p>
+    return (
+      <div>
+        <h3>{this.props.restaurant.name}</h3>
+        <p>Cuisine: {this.props.restaurant.cuisine}</p>
+        <p>Neighborhood: {this.props.restaurant.neighborhood}</p>
 
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default RestaurantCard;

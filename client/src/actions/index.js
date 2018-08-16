@@ -1,6 +1,6 @@
 const API_URL = 'http://localhost:3001/api'
 
-export const getRestaurants = restaurants => {
+const setRestaurants = restaurants => {
   return {
     type: 'FETCH_RESTAURANTS',
     restaurants
@@ -21,12 +21,24 @@ export const removeRestaurant = restaurant => {
   }
 }
 
+/*
 export const fetchRestaurants = () => {
   return (dispatch) => {
     dispatch({type: 'LOADING_RESTAURANTS'});
       return fetch(`${API_URL}/restaurants`)
       .then(resp => resp.json())
       .then(restaurants => dispatch({type: 'FETCH_RESTAURANTS', payload: restaurants}))
+  }
+}
+*/
+
+export const fetchRestaurants = () => {
+  return dispatch => {
+    dispatch({type: 'LOADING_RESTAURANTS'});
+      return fetch(`${API_URL}/restaurants`)
+      .then(resp => resp.json())
+      .then(restaurants => dispatch(setRestaurants(restaurants)))
+      .catch(error => console.log(error))
   }
 }
 
