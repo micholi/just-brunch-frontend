@@ -12,12 +12,26 @@ const link = {
 
 const NavBar = () => {
   return (
-    <div>
+    <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px' }}>
+
+    <NavLink
+      to="/"
+      style={{width: '100px', padding: '12px', margin: '0 6px 6px', background: '#B03B3F', textDecoration: 'none', color: 'black'}}
+      >
+      justBrunch
+    </NavLink>
+
       <NavLink
         to="/"
         style={link}
         >
         Home
+      </NavLink>
+      <NavLink
+        to="/"
+        style={link}
+        >
+        About
       </NavLink>
       <NavLink
         to="/new"
@@ -29,7 +43,7 @@ const NavBar = () => {
         to="/restaurants"
         style={link}
         >
-        Restaurants
+        Brunch Recommendations
       </NavLink>
     </div>
   )

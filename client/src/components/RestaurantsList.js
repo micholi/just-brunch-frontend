@@ -1,30 +1,64 @@
-import React, { Component } from 'react';
-import Restaurant from './Restaurant';
+import React from 'react';
 import { connect } from 'react-redux';
-// import { fetchRestaurants } from '../actions';
+import RestaurantCard from './RestaurantCard';
+import { Link } from 'react-router-dom';
 
-class RestaurantsList extends Component {
+
+class RestaurantsList extends React.Component {
+
+/*
+  renderRestaurants = this.props.restaurants.map(restaurant =>
+  <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+)
+*/
+
+/*
+  renderRestaurants = this.props.restaurants.map((restaurant) =>
+    <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+  )
+*/
+
+
+renderRestaurants = () => {
+  return this.props.restaurants.map(restaurant =>
+    <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+  )
+}
+
+
 
   render() {
 
-    const renderRestaurants = () => {
-      return this.props.restaurants.map(restaurant =>
-          <Restaurant key={restaurant.id} restaurant={restaurant} />)
-    }
+/*
+    const renderRestaurants = this.props.restaurants.map(function(restaurant) {
+      return (
+        <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+      );
+    });
+*/
+
+/*
+  const renderRestaurants = () => {
+    return this.props.restaurants.map(restaurant =>
+      <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+    )
+  }
+*/
 
     return (
       <div>
-          {renderRestaurants}
+        {this.renderRestaurants()}
       </div>
     )
 
   }
 }
 
-const mapStateToProps = (state) => {
+
+const mapStateToProps = state => {
   return {
     restaurants: state.restaurants
   }
 }
 
-export default connect(mapStateToProps)(RestaurantsList)
+export default connect(mapStateToProps)(RestaurantsList);

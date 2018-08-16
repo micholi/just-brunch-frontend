@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
-    render json: @restaurants, status: 200
+    render json: @restaurants
   end
 
   def show

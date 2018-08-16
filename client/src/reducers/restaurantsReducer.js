@@ -1,12 +1,35 @@
-export default (state={restaurants: []}, action) => {
+export default (state =
+  {restaurants: []
+}, action) => {
 
   switch (action.type) {
     case 'LOADING_RESTAURANTS':
-    return state = {restaurants: []}
+      return state
 
-    case 'GET_RESTAURANTS':
-      return {...state, restaurants: action.restaurants}
+    case 'FETCH_RESTAURANTS':
+      return {restaurants: action.restaurants}
 
+    //case 'GET_RESTAURANT':
+    //  return { restaurant: action.restaurant }
+
+    case 'ADD_RESTAURANT':
+      return {restaurants: [...state.restaurants, action.restaurant]}
+
+    case 'EDIT_RESTAURANT':
+      return state.restaurants.map((restaurant) => {
+        if (restaurant.id === action.restaurant.id) {
+          restaurant.name = action.restaurant.name
+          restaurant.neighborhood = action.restaurant.neighborhood
+          restaurant.cuisine = action.restaurant.cuisine
+          restaurant.price_range = action.restaurant.price_range
+          restaurant.dress_code = action.restaurant.dress_code
+          restaurant.image = action.restaurant.image
+        }
+      })
+      return {...state, restaurant: action.restaurant}
+
+    case 'REMOVE_RESTAURANT':
+      return {restaurants: state.restaurants.filter(restaurant => restaurant.id !=== action.restaurant)}
 
   default:
     return state;

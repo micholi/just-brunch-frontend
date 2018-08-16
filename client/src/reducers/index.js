@@ -2,9 +2,7 @@ import { combineReducers } from 'redux';
 import restaurantsReducer from './restaurantsReducer';
 import commentsReducer from './commentsReducer';
 
-const rootReducer = combineReducers({
+export default combineReducers({
   restaurants: restaurantsReducer,
   comments: commentsReducer
 })
-
-export default rootReducer;
