@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchComments } from '../actions';
 import CommentsList from './CommentsList';
+import CommentForm from './CommentForm'
 
 class RestaurantShow extends React.Component {
 
@@ -23,6 +24,7 @@ class RestaurantShow extends React.Component {
         <br></br>
 
         <CommentsList comments={comments} />
+        <CommentForm />
       </div>
 
     )
