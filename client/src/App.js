@@ -20,7 +20,7 @@ class App extends Component {
         <Route exact path="/new" component={RestaurantNew} />
         <Route exact path="/restaurants" component={RestaurantsContainer} />
 
-        <Route exact path="/restaurants/:id" component={RestaurantShow} />
+        <Route exact path="/restaurants/:restaurantId" component={RestaurantShow} />
         </div>
       </Router>
     );

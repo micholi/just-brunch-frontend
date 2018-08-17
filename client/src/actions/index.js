@@ -21,12 +21,29 @@ export const removeRestaurant = restaurant => {
   }
 }
 
+const setComments = comments => {
+  return {
+    type: 'FETCH_COMMENTS',
+    comments
+  }
+}
+
 export const fetchRestaurants = () => {
   return dispatch => {
     dispatch({type: 'LOADING_RESTAURANTS'});
       return fetch(`${API_URL}/restaurants`)
       .then(resp => resp.json())
       .then(restaurants => dispatch(setRestaurants(restaurants)))
+      .catch(error => console.log(error))
+  }
+}
+
+export const fetchComments = (restaurantId) => {
+  return dispatch => {
+    dispatch({type: 'LOADING_COMMENTS'});
+      return fetch(`${API_URL}/restaurants/${restaurantId}/comments`)
+      .then(resp => resp.json())
+      .then(comments => dispatch(setComments(comments)))
       .catch(error => console.log(error))
   }
 }

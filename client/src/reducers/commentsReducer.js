@@ -1,13 +1,11 @@
-export default (state =
-  {comments: []
-}, action) => {
-
+export default (state = [], action) => {
   switch(action.type) {
+
     case 'LOADING_COMMENTS':
       return state
 
     case 'FETCH_COMMENTS':
-      return {comments: action.comments}
+      return action.comments
 
   default:
     return state;

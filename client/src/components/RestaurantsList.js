@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import RestaurantCard from './RestaurantCard';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 const RestaurantsList = ({ restaurants }) => {
 //  add function to sort alphabetically?

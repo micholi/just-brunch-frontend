@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    # is this needed? tbd
+    render json: @comment
   end
 
   def new
