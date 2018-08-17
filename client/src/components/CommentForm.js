@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { createComment } from '../actions';
 import {FormControl, FormGroup} from 'react-bootstrap';
 
 class CommentForm extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       content: '' ,
-      commenter: ''
+      commenter: '',
+      restaurant_id: +this.props.restaurantId
     };
   }
 
@@ -21,8 +23,8 @@ class CommentForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { addComment, history } = this.props;
-    addComment(this.state, history);
+    const { createComment, history } = this.props;
+    createComment(this.state, history);
   }
 
   render(){
@@ -37,7 +39,7 @@ class CommentForm extends Component {
             <FormControl
               type="text"
               name="content"
-              value={this.state.name}
+              value={this.state.content}
               onChange={this.handleChange}
             />
             <br></br>
@@ -46,7 +48,7 @@ class CommentForm extends Component {
             <FormControl
               type="text"
               name="commenter"
-              value={this.state.cuisine}
+              value={this.state.commenter}
               onChange={this.handleChange}
             />
             <br></br>
@@ -61,6 +63,4 @@ class CommentForm extends Component {
   }
 }
 
-
-//export default connect(null, { createRestaurant })(RestaurantNew)
-export default CommentForm;
+export default connect(null, { createComment })(CommentForm)

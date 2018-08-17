@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { createRestaurant } from '../actions';
 import {FormControl, FormGroup} from 'react-bootstrap';
 
 class RestaurantForm extends Component {
@@ -25,8 +26,8 @@ class RestaurantForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { addRestaurant, history } = this.props;
-    addRestaurant(this.state, history);
+    const { createRestaurant, history } = this.props;
+    createRestaurant(this.state, history);
   }
 
   render(){
@@ -103,6 +104,4 @@ class RestaurantForm extends Component {
   }
 }
 
-
-//export default connect(null, { createRestaurant })(RestaurantNew)
-export default RestaurantForm;
+export default connect(null, { createRestaurant })(RestaurantForm)

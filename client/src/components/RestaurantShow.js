@@ -24,7 +24,7 @@ class RestaurantShow extends React.Component {
         <br></br>
 
         <CommentsList comments={comments} />
-        <CommentForm />
+        <CommentForm restaurantId={restaurant.id} />
       </div>
 
     )
