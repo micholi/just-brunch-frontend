@@ -13,7 +13,6 @@ class RestaurantShow extends React.Component {
     const { restaurant, comments } = this.props;
 
     return (
-
       <div>
         <h3>{restaurant.name}</h3>
         <img src={restaurant.image} width="30%" height="50%" alt="pic" />
@@ -22,7 +21,8 @@ class RestaurantShow extends React.Component {
         <p>Price: {restaurant.price_range}</p>
         <p>Dress Code: {restaurant.dress_code}</p>
         <br></br>
-        <CommentsList comments={this.props.comments} />
+
+        <CommentsList comments={comments} />
       </div>
 
     )
@@ -32,9 +32,7 @@ class RestaurantShow extends React.Component {
 // correctly displays restaurant when clicking on link, but not when manually updating the url
 const mapStateToProps = (state, ownProps) => {
 
-  const restaurant = state.restaurants.find(restaurant => restaurant.id === parseInt(ownProps.match.params.restaurantId, 10))
-    return restaurant ? { restaurant } : {restaurant: {} };
-
+  const restaurant = state.restaurants.find(restaurant => restaurant.id === parseInt(ownProps.match.params.restaurantId, 10)) || {}
   return ({
     restaurant: restaurant,
     comments: state.comments

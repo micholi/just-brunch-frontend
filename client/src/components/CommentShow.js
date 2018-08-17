@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 
 class CommentShow extends Component {
   render() {
-    const { content, commenter} = this.props;
+    const { comment } = this.props;
 
     return (
       <div>
-        <p>{content}</p>
-        <p>{commenter}</p>
+        <p>{comment.content} - {comment.commenter}</p>
       </div>
     )
   }
