@@ -7,8 +7,8 @@ export default (state = [], action) => {
     case 'FETCH_RESTAURANTS':
       return action.restaurants
 
-    case 'GET_RESTAURANT':
-      return { restaurant: action.restaurant }
+    case 'FETCH_RESTAURANT':
+      return action.restaurant
 
     case 'ADD_RESTAURANT':
       return {restaurants: [...state.restaurants, action.restaurant]}

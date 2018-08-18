@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchRestaurant } from '../actions';
 import { fetchComments } from '../actions';
 import CommentsList from './CommentsList';
 import CommentForm from './CommentForm'
@@ -7,7 +8,8 @@ import CommentForm from './CommentForm'
 class RestaurantShow extends React.Component {
 
   componentDidMount() {
-    this.props.fetchComments(this.props.match.params.restaurantId)
+    this.props.fetchRestaurant(this.props.match.params.restaurantId);
+    this.props.fetchComments(this.props.match.params.restaurantId);
   }
 
   render() {
@@ -31,7 +33,6 @@ class RestaurantShow extends React.Component {
   }
 }
 
-// correctly displays restaurant when clicking on link, but not when manually updating the url
 const mapStateToProps = (state, ownProps) => {
 
   const restaurant = state.restaurants.find(restaurant => restaurant.id === parseInt(ownProps.match.params.restaurantId, 10)) || {}
@@ -41,4 +42,4 @@ const mapStateToProps = (state, ownProps) => {
   })
 }
 
-export default connect(mapStateToProps, { fetchComments })(RestaurantShow);
+export default connect(mapStateToProps, { fetchComments, fetchRestaurant })(RestaurantShow);

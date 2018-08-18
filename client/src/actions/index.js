@@ -7,6 +7,13 @@ const setRestaurants = restaurants => {
   }
 }
 
+const setRestaurant = restaurant => {
+  return {
+    type: 'FETCH_RESTAURANT',
+    restaurant
+  }
+}
+
 const addRestaurant = restaurant => {
   return {
     type:'ADD_RESTAURANT',
@@ -21,17 +28,19 @@ const removeRestaurant = restaurant => {
   }
 }
 
-export const addComment = comment => {
-  return {
-    type: 'ADD_COMMENT',
-    comment
-  }
-}
+
 
 const setComments = comments => {
   return {
     type: 'FETCH_COMMENTS',
     comments
+  }
+}
+
+const addComment = comment => {
+  return {
+    type: 'ADD_COMMENT',
+    comment
   }
 }
 
@@ -45,6 +54,21 @@ export const fetchRestaurants = () => {
   }
 }
 
+export const fetchRestaurant = (restaurantId) => {
+	return dispatch => {
+		return fetch(`${API_URL}/restaurants/${restaurantId}`)
+			.then(response => response.json())
+			.then(restaurant => {
+				dispatch(setRestaurant([restaurant]));
+			})
+      .catch(error => console.log(error))
+	}
+}
+
+export const createRestaurant = (restaurant) => {
+
+}
+
 export const fetchComments = (restaurantId) => {
   return dispatch => {
     dispatch({type: 'LOADING_COMMENTS'});
@@ -53,10 +77,6 @@ export const fetchComments = (restaurantId) => {
       .then(comments => dispatch(setComments(comments)))
       .catch(error => console.log(error))
   }
-}
-
-export const createRestaurant = (restaurant) => {
-
 }
 
 export const createComment = (comment) => {

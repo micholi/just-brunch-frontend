@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from '../components/RestaurantShow';
@@ -25,14 +25,10 @@ class RestaurantsContainer extends React.Component {
               <RestaurantsList restaurants={restaurants} />
             )}/>
 
-
-          <Route path={`${match.url}/:restaurantId`} component={RestaurantShow} />
-
-          <Route path="/new" component={RestaurantForm} />
-
+          <Route exact path="/new" component={RestaurantForm} />
+          <Route exact path={`${match.url}/:restaurantId`} component={RestaurantShow} />
         </Switch>
       </div>
-
     )
   }
 }
