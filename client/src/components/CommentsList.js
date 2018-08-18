@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentShow from './CommentShow';
 import { connect } from 'react-redux';
+import { ListGroup } from 'react-bootstrap'
 
 const CommentsList = ({ comments }) => {
 
@@ -9,9 +10,11 @@ const CommentsList = ({ comments }) => {
   );
 
   return (
-    <div>
+    <div className="container-fluid">
     <p>Comments:</p>
+    <ListGroup>
       {renderComments}
+      </ListGroup>
     </div>
   )
 }

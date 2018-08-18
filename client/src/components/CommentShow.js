@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { ListGroupItem } from 'react-bootstrap'
 
 class CommentShow extends Component {
   render() {
@@ -7,7 +8,7 @@ class CommentShow extends Component {
 
     return (
       <div>
-        <p>{comment.content} - {comment.commenter}</p>
+        <ListGroupItem>{comment.content} - {comment.commenter}</ListGroupItem>
       </div>
     )
   }

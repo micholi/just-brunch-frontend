@@ -1,12 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import RestaurantCard from './RestaurantCard';
-//import { Link } from 'react-router-dom';
 
 const RestaurantsList = ({ restaurants }) => {
-//  add function to sort alphabetically?
 
-  const renderRestaurants = restaurants.map(restaurant =>
+  let alphaSort = restaurants.sort(function(a, b) {
+    var nameA = a.name.toUpperCase();
+    var nameB = b.name.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+      }
+    if (nameA > nameB) {
+      return 1;
+      }
+      return 0;
+    });
+
+  const renderRestaurants = alphaSort.map(restaurant =>
      <RestaurantCard key={restaurant.id} restaurant={restaurant} />
   );
 
@@ -17,7 +27,6 @@ const RestaurantsList = ({ restaurants }) => {
         </div>
       </div>
     )
-
 }
 
 export default RestaurantsList;
