@@ -23,7 +23,6 @@ class CommentForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-console.log(this.state)
     this.props.createComment(this.state);
     console.log(this.state)
     this.setState({

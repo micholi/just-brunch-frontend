@@ -28,8 +28,6 @@ const removeRestaurant = restaurant => {
   }
 }
 
-
-
 const setComments = comments => {
   return {
     type: 'FETCH_COMMENTS',
@@ -66,7 +64,23 @@ export const fetchRestaurant = (restaurantId) => {
 }
 
 export const createRestaurant = (restaurant) => {
-
+  return dispatch => {
+    return fetch(`${API_URL}/restaurants`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({restaurant: restaurant})
+    })
+    //.then(handleErrors)
+    .then(response => response.json())
+    .then(restaurant => {
+      dispatch(addRestaurant(restaurant))
+    })
+    .catch(error => {
+      dispatch({type: 'error'})
+    })
+  }
 }
 
 export const fetchComments = (restaurantId) => {

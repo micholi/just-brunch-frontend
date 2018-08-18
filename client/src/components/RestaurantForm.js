@@ -10,15 +10,15 @@ class RestaurantForm extends Component {
 
     this.state = {
       name: '' ,
-      cuisine: '' ,
       neighborhood: '',
-      price: '',
+      cuisine: '',
+      price_range: '',
       dress_code: '',
       image: ''
     };
   }
 
-  handleChange = event => {
+  handleOnChange = event => {
       this.setState({
         [event.target.name]: event.target.value
       });
@@ -26,8 +26,15 @@ class RestaurantForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { createRestaurant, history } = this.props;
-    createRestaurant(this.state, history);
+    this.props.createRestaurant(this.state)
+    this.setState({
+      name: '' ,
+      neighborhood: '',
+      cuisine: '',
+      price_range: '',
+      dress_code: '',
+      image: ''
+    })
   }
 
   render(){
@@ -43,7 +50,7 @@ class RestaurantForm extends Component {
               type="text"
               name="name"
               value={this.state.name}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
@@ -52,21 +59,27 @@ class RestaurantForm extends Component {
               type="text"
               name="cuisine"
               value={this.state.cuisine}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
-            <label>Neigbhorhood:</label>
+            <label>Neighborhood:</label>
             <FormControl
               type="text"
               name="neighborhood"
               value={this.state.neighborhood}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
-            <label>Price:</label>
-            <FormControl componentClass="select" placeholder="select">
+            <label>Price Range:</label>
+            <FormControl
+              componentClass="select"
+              placeholder="select"
+              name="price_range"
+              value={this.state.price_range}
+              onChange={this.handleOnChange}
+              >
               <option value="select">select</option>
               <option value="inexpensive">Inexpensive</option>
               <option value="moderate">Moderate</option>
@@ -79,8 +92,8 @@ class RestaurantForm extends Component {
               className="form-control"
               type="text"
               name="dress_code"
-              value={this.state.neighborhood}
-              onChange={this.handleChange}
+              value={this.state.dress_code}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
@@ -90,7 +103,7 @@ class RestaurantForm extends Component {
               type="text"
               name="image"
               value={this.state.image}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 

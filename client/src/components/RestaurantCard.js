@@ -17,7 +17,7 @@ class RestaurantCard extends Component {
           <br></br>
           <p>Cuisine: {this.props.restaurant.cuisine}</p>
           <p>Neighborhood: {this.props.restaurant.neighborhood}</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
+          <button type="button" className="btn btn-sm btn-outline-secondary">View Details</button>
           </div>
       </div>
     )

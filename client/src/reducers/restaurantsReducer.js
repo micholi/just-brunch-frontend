@@ -11,7 +11,8 @@ export default (state = [], action) => {
       return action.restaurant
 
     case 'ADD_RESTAURANT':
-      return {restaurants: [...state.restaurants, action.restaurant]}
+      //return {restaurants: [...state.restaurants, action.restaurant]}
+      return state.concat(action.restaurant);
 
 /*
     case 'EDIT_RESTAURANT':
