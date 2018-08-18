@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
-import RestaurantShow from '../components/RestaurantShow';
+import RestaurantShow from './RestaurantShow';
 import RestaurantForm from '../components/RestaurantForm';
 import RestaurantCard from '../components/RestaurantCard';
 

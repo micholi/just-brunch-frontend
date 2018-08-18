@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchRestaurant } from '../actions';
 import { fetchComments } from '../actions';
-import CommentsList from './CommentsList';
-import CommentForm from './CommentForm'
+import CommentsList from '../components/CommentsList';
+import CommentForm from '../components/CommentForm'
 
 class RestaurantShow extends React.Component {
 

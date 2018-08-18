@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import RestaurantForm from './components/RestaurantForm';
-import RestaurantShow from './components/RestaurantShow';
-import RestaurantsContainer from './containers/RestaurantsContainer';
+import RestaurantShow from './containers/RestaurantShow';
+import RestaurantsPage from './containers/RestaurantsPage';
 import './App.css'
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
 
             <Route exact path="/new" component={RestaurantForm} />
-            <Route exact path="/restaurants" component={RestaurantsContainer} />
+            <Route exact path="/restaurants" component={RestaurantsPage} />
             <Route path="/restaurants/:restaurantId" component={RestaurantShow} />
           </Switch>
         </div>
