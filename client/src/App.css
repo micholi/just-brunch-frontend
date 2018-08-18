@@ -1,4 +1,22 @@
 .App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+  color: black;
+}
+
+.navbar-logo {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow:
+    -2px -2px 0 #FFF,
+    1px -2px 0 #FFF,
+    -2px 2px 0 #FFF,
+    2px 2px 0 #FFF;
+}
+
+.App {
   text-align: center;
 }
 

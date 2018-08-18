@@ -8,7 +8,10 @@ export default (state = [], action) => {
       return action.comments
 
     case 'ADD_COMMENT':
-      return {comments: [...state.comments, action.comment]}
+      // not sure why this line of code doesn't work
+      return {comments: [...state.comments, action.comment]};
+      // this appears to work
+      return state.concat(action.comment);
 
   default:
     return state;

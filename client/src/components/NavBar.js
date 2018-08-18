@@ -18,7 +18,7 @@ const NavBar = () => {
       to="/"
       style={{width: '100px', padding: '12px', margin: '0 6px 6px', background: '#B03B3F', textDecoration: 'none', color: 'black'}}
       >
-      justBrunch
+      <span className="navbar-logo">justBrunch</span>
     </NavLink>
 
       <NavLink

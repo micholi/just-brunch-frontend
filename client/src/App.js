@@ -5,6 +5,7 @@ import Home from './components/Home';
 import RestaurantForm from './components/RestaurantForm';
 import RestaurantShow from './components/RestaurantShow';
 import RestaurantsContainer from './containers/RestaurantsContainer';
+import './App.css'
 
 //import { Route, Switch } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
         <NavBar />
         <Route exact path="/" component={Home} />
 

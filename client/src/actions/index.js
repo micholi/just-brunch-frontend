@@ -7,14 +7,14 @@ const setRestaurants = restaurants => {
   }
 }
 
-export const addRestaurant = restaurant => {
+const addRestaurant = restaurant => {
   return {
     type:'ADD_RESTAURANT',
     restaurant
   }
 }
 
-export const removeRestaurant = restaurant => {
+const removeRestaurant = restaurant => {
   return {
     type: 'REMOVE_RESTAURANT',
     restaurant
@@ -59,7 +59,7 @@ export const createRestaurant = (restaurant) => {
 
 }
 
-export const createComment = (comment, routerHistory) => {
+export const createComment = (comment) => {
   return dispatch => {
     return fetch(`${API_URL}/restaurants/${comment.restaurant_id}/comments`, {
       method: "POST",
@@ -72,8 +72,6 @@ export const createComment = (comment, routerHistory) => {
     .then(response => response.json())
     .then(comment => {
       dispatch(addComment(comment))
-    // comemnt created, but doesn't render
-    //  routerHistory.replace(`/restaurants/${comment.restaurant_id}`)
     })
     .catch(error => {
       dispatch({type: 'error'})

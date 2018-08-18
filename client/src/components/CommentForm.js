@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createComment } from '../actions';
-import {FormControl, FormGroup} from 'react-bootstrap';
+import { FormControl, FormGroup } from 'react-bootstrap';
 
 class CommentForm extends Component {
 
@@ -15,7 +15,7 @@ class CommentForm extends Component {
     };
   }
 
-  handleChange = event => {
+  handleOnChange = event => {
       this.setState({
         [event.target.name]: event.target.value
       });
@@ -23,8 +23,13 @@ class CommentForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { createComment, history } = this.props;
-    createComment(this.state, history);
+console.log(this.state)
+    this.props.createComment(this.state);
+    console.log(this.state)
+    this.setState({
+    content: '',
+    commenter: ''
+    })
   }
 
   render(){
@@ -40,7 +45,7 @@ class CommentForm extends Component {
               type="text"
               name="content"
               value={this.state.content}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
@@ -49,7 +54,7 @@ class CommentForm extends Component {
               type="text"
               name="commenter"
               value={this.state.commenter}
-              onChange={this.handleChange}
+              onChange={this.handleOnChange}
             />
             <br></br>
 
