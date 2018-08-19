@@ -33,9 +33,9 @@ class CommentForm extends Component {
 
   render(){
     return (
-      <div className="container-fluid">
+      <div className="comment-form">
       <h6>Add Comment</h6>
-        <form style={{ width: 600}} onSubmit={this.handleOnSubmit} >
+        <form onSubmit={this.handleOnSubmit} >
 
           <FormGroup>
 

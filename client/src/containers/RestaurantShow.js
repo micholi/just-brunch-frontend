@@ -16,17 +16,26 @@ class RestaurantShow extends React.Component {
     const { restaurant, comments } = this.props;
 
     return (
-      <div>
-        <h3>{restaurant.name}</h3>
-        <img src={restaurant.image} width="30%" height="50%" alt="pic" />
-        <p>Neighborhood: {restaurant.neighborhood}</p>
-        <p>Cuisine: {restaurant.cuisine}</p>
-        <p>Price: {restaurant.price_range}</p>
-        <p>Dress Code: {restaurant.dress_code}</p>
-        <br></br>
+      <div className="show">
+        <div className="container-fluid">
 
-        <CommentsList comments={comments} />
-        <CommentForm restaurantId={restaurant.id} />
+          <h3 className="restaurant-header">{restaurant.name}</h3>
+            <div className="restaurant-body">
+            <img src={restaurant.image} width="300" height="250" alt="pic" />
+            <br></br>
+            <span>Neighborhood: {restaurant.neighborhood}</span>
+            <br></br>
+            <span>Cuisine: {restaurant.cuisine}</span>
+            <br></br>
+            <span>Price: {restaurant.price_range}</span>
+            <br></br>
+            <span>Dress Code: {restaurant.dress_code}</span>
+          </div>
+          <div className="bottom-border"></div>
+
+          <CommentsList comments={comments} />
+          <CommentForm restaurantId={restaurant.id} />
+        </div>
       </div>
 
     )

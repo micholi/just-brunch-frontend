@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createRestaurant } from '../actions';
-import {FormControl, FormGroup} from 'react-bootstrap';
+import { FormControl, FormGroup } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
 
 class RestaurantForm extends Component {
 
@@ -27,21 +28,14 @@ class RestaurantForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.createRestaurant(this.state)
-    this.setState({
-      name: '' ,
-      neighborhood: '',
-      cuisine: '',
-      price_range: '',
-      dress_code: '',
-      image: ''
-    })
+    this.props.history.push('/restaurants')
   }
 
   render(){
     return (
-      <div className="container-fluid">
-      <h6>Add Brunch Recommendation</h6>
-        <form style={{ width: 600}} onSubmit={this.handleOnSubmit} >
+      <div className="restaurant-form">
+        <h5>Add Your Brunch Recommendation</h5>
+        <form onSubmit={this.handleOnSubmit} >
 
           <FormGroup>
 
