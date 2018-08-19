@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+// note button link not yet functional
 class RestaurantCard extends Component {
 
   render() {

@@ -2,11 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=Marmelad');
 
 .App {
-
   font-family: 'Lato', sans-serif;
   color: black;
   background-color: #F9F8F8;
 }
+
+/* ----- HOME PAGE ----- */
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(components/brunch2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.welcome h2 {
+  color: #D6D6D6;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.text-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #D6D6D6;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
 
 .navbar-logo {
   font-family: 'Marmelad', sans-serif;
@@ -30,7 +60,7 @@
 }
 
 .show {
-  width: 600px;
+  min-width: 600px;
   margin: auto;
   border: 1px solid #D3D3D3;
   margin-top: 35px;
@@ -68,4 +98,8 @@
 
 .comment-form {
   margin-top: 20px;
+}
+
+.btn-md {
+  display: inline;
 }
