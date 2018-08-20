@@ -25,7 +25,6 @@ class RestaurantShow extends React.Component {
     this.props.likeRestaurant(this.props.restaurant)
   }
 
-
   render() {
     const { restaurant, comments, deleteRestaurant, history } = this.props;
 
@@ -61,7 +60,7 @@ class RestaurantShow extends React.Component {
           <div className="bottom-border"></div>
 
           <CommentsList comments={comments} />
-          <CommentForm restaurantId={restaurant.id} />
+          <CommentForm restaurantId={this.props.match.params.restaurantId} />
 
         </div>
       </div>

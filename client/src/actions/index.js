@@ -98,21 +98,20 @@ export const createRestaurant = (restaurant) => {
 }
 
 export const likeRestaurant = (restaurant) => {
-  
   const updatedRestaurant = Object.assign(...restaurant, { likes: restaurant.likes + 1 })
-  return dispatch => {
-    return fetch(`${API_URL}/restaurants/${restaurant.id}`, {
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({restaurant: updatedRestaurant})
-    })
-    .then(response => response.json())
-    .then(restaurant => {
-      dispatch(addLikes(restaurant))
-    })
-    .catch(error => console.log(error))
+    return dispatch => {
+      return fetch(`${API_URL}/restaurants/${restaurant.id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({restaurant: updatedRestaurant})
+      })
+      .then(response => response.json())
+      .then(restaurant => {
+        dispatch(addLikes(restaurant))
+      })
+      .catch(error => console.log(error))
   }
 }
 
@@ -167,7 +166,6 @@ export const createComment = (comment) => {
       },
       body: JSON.stringify({comment: comment})
     })
-    //.then(handleErrors)
     .then(response => response.json())
     .then(comment => {
       dispatch(addComment(comment))

@@ -29,26 +29,21 @@ class RestaurantsContainer extends React.Component {
             )}/>
 
           <Route exact path="/new" component={RestaurantForm} />
-
-
-
           <Route exact path={`${match.url}/:restaurantId`} component={RestaurantShow} />
-
-
         </Switch>
       </div>
     )
   }
 }
 
-
+/*
 const mapStateToProps = (state) => {
   return {
     restaurants: state.restaurants
   }
 }
+*/
 
+//export default connect(mapStateToProps, { fetchRestaurants })(RestaurantsContainer)
 
-export default connect(mapStateToProps, { fetchRestaurants })(RestaurantsContainer)
-
-//export default connect(state => ({ restaurants: state.restaurants }), { fetchRestaurants })(RestaurantsContainer);
+export default connect(state => ({ restaurants: state.restaurants }), { fetchRestaurants })(RestaurantsContainer);
