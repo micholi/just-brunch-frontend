@@ -116,7 +116,7 @@ h5.restaurant-header a:hover, a:visited:hover {
 /* ----- RESTAURANT FORM ----- */
 
 .restaurant-form {
-  min-width: 60%;
+  width: 60%;
   margin: auto;
   border: 1px solid #D3D3D3;
   margin-top: 35px;

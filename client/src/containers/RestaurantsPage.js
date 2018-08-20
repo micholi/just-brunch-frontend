@@ -7,7 +7,7 @@ import RestaurantShow from './RestaurantShow';
 import RestaurantForm from '../components/RestaurantForm';
 import RestaurantCard from '../components/RestaurantCard';
 
-import EditRestaurant from '../components/EditRestaurant';
+//import EditRestaurant from '../components/EditRestaurant';
 import { Link } from 'react-router-dom';
 
 class RestaurantsContainer extends React.Component {
@@ -30,7 +30,7 @@ class RestaurantsContainer extends React.Component {
 
           <Route exact path="/new" component={RestaurantForm} />
 
-<Route exact path={`${match.url}/:restaurantId/edit`} component={EditRestaurant}/>
+
 
           <Route exact path={`${match.url}/:restaurantId`} component={RestaurantShow} />
 

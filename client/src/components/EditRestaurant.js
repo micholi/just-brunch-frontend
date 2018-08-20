@@ -4,8 +4,8 @@ import { updateRestaurant } from '../actions';
 import { FormControl, FormGroup } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
+/*
 class EditRestaurant extends Component {
-
   constructor(props) {
     super();
 
@@ -123,3 +123,4 @@ console.log(this.props)
 }
 
 export default connect(null, { updateRestaurant })(EditRestaurant)
+*/

@@ -6,7 +6,7 @@ import CommentsList from '../components/CommentsList';
 import CommentForm from '../components/CommentForm'
 
 import { Link } from 'react-router-dom';
-import EditRestaurant from '../components/EditRestaurant'
+//import EditRestaurant from '../components/EditRestaurant'
 
 class RestaurantShow extends React.Component {
 
@@ -37,7 +37,7 @@ class RestaurantShow extends React.Component {
 
           </div>
 
-<Link key={restaurant.id} to={`/restaurants/${restaurant.id}/edit`}>Edit Restaurant</Link>
+
 
 
 
