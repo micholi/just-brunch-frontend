@@ -37,16 +37,15 @@
   margin-right: 10px;
 }
 
-
 .navbar-logo {
   font-family: 'Marmelad', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
-  text-shadow:
-    -1px -1px 0 #FFF,
-    1px -1px 0 #FFF,
-    -1px 1px 0 #FFF,
-    1px 1px 0 #FFF;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.navbar-link {
+  font-size: 0.85em;
 }
 
 .restaurant-form {
