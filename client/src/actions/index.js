@@ -21,6 +21,13 @@ const addRestaurant = restaurant => {
   }
 }
 
+const updateRestaurant = restaurant => {
+  return {
+    type:'EDIT_RESTAURANT',
+    restaurant
+  }
+}
+
 const removeRestaurant = restaurant => {
   return {
     type: 'REMOVE_RESTAURANT',
@@ -81,6 +88,10 @@ export const createRestaurant = (restaurant) => {
       dispatch({type: 'error'})
     })
   }
+}
+
+export const editRestaurant = (restaurant) => {
+
 }
 
 export const fetchComments = (restaurantId) => {

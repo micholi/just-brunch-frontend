@@ -5,6 +5,7 @@ import Home from './components/Home';
 import RestaurantForm from './components/RestaurantForm';
 import RestaurantShow from './containers/RestaurantShow';
 import RestaurantsPage from './containers/RestaurantsPage';
+import EditRestaurant from './components/EditRestaurant';
 import Recipes from './components/Recipes';
 import './App.css'
 
@@ -21,7 +22,13 @@ class App extends Component {
             <Route exact path="/new" component={RestaurantForm} />
             <Route exact path="/restaurants" component={RestaurantsPage} />
             <Route path="/restaurants/:restaurantId" component={RestaurantShow} />
+
+            <Route path="/restaurants/:restaurantId/edit" component={EditRestaurant}/>
+
             <Route path="/recipes" component={Recipes} />
+
+
+
           </Switch>
         </div>
       </Router>

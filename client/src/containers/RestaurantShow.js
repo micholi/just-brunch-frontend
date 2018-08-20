@@ -5,6 +5,9 @@ import { fetchComments } from '../actions';
 import CommentsList from '../components/CommentsList';
 import CommentForm from '../components/CommentForm'
 
+import { Link } from 'react-router-dom';
+import EditRestaurant from '../components/EditRestaurant'
+
 class RestaurantShow extends React.Component {
 
   componentDidMount() {
@@ -29,7 +32,15 @@ class RestaurantShow extends React.Component {
             <span>Price: {restaurant.price_range}</span>
             <br></br>
             <span>Dress Code: {restaurant.dress_code}</span>
+
+
+
           </div>
+
+<Link key={restaurant.id} to={`/restaurants/${restaurant.id}/edit`}>Edit Restaurant</Link>
+
+
+
           <div className="bottom-border"></div>
 
           <CommentsList comments={comments} />

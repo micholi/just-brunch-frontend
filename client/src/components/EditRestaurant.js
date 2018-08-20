@@ -6,16 +6,17 @@ import { withRouter } from 'react-router-dom';
 
 class EditRestaurant extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      name: '' ,
-      neighborhood: '',
-      cuisine: '',
-      price_range: '',
-      dress_code: '',
-      image: ''
+      id: props.restaurant.id,
+      name: props.restaurant.name,
+      neighborhood: props.restaurant.neighborhood,
+      cuisine: props.restaurant.cuisine,
+      price_range: props.restaurant.price_range,
+      dress_code: props.restaurant.dress_code,
+      image: props.restaurant.image
     };
   }
 
@@ -34,6 +35,9 @@ class EditRestaurant extends Component {
   render(){
     return (
       <div className="restaurant-form">
+
+      <p>TEST</p>
+
         <h5>Add Your Brunch Recommendation</h5>
         <form onSubmit={this.handleOnSubmit} >
 
@@ -111,4 +115,4 @@ class EditRestaurant extends Component {
   }
 }
 
-export default connect(null, { createRestaurant })(EditRestaurant)
+export default connect(null, { editRestaurant })(EditRestaurant)

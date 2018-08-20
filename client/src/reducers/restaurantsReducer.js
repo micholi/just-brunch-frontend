@@ -14,7 +14,7 @@ export default (state = [], action) => {
       //return {restaurants: [...state.restaurants, action.restaurant]}
       return state.concat(action.restaurant);
 
-/*
+
     case 'EDIT_RESTAURANT':
       return state.restaurants.map((restaurant) => {
         if (restaurant.id === action.restaurant.id) {
@@ -31,7 +31,7 @@ export default (state = [], action) => {
 
     case 'REMOVE_RESTAURANT':
       return {restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.restaurant)}
-*/
+
 
   default:
     return state;
