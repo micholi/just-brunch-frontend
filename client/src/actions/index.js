@@ -28,6 +28,13 @@ const editRestaurant = restaurant => {
   }
 }
 
+const addLikes = restaurant => {
+  return {
+    type: 'LIKE_RESTAURANT',
+    restaurant
+  }
+}
+
 const removeRestaurant = restaurant => {
   return {
     type: 'REMOVE_RESTAURANT',
@@ -87,6 +94,25 @@ export const createRestaurant = (restaurant) => {
     .catch(error => {
       dispatch({type: 'error'})
     })
+  }
+}
+
+export const likeRestaurant = (restaurant) => {
+  
+  const updatedRestaurant = Object.assign(...restaurant, { likes: restaurant.likes + 1 })
+  return dispatch => {
+    return fetch(`${API_URL}/restaurants/${restaurant.id}`, {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({restaurant: updatedRestaurant})
+    })
+    .then(response => response.json())
+    .then(restaurant => {
+      dispatch(addLikes(restaurant))
+    })
+    .catch(error => console.log(error))
   }
 }
 

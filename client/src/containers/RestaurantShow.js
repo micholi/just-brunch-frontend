@@ -8,8 +8,11 @@ import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
-//import EditRestaurant from '../components/EditRestaurant'
-import { deleteRestaurant } from '../actions'
+//import { updateRestaurant } from '../actions';
+import { deleteRestaurant } from '../actions';
+
+import { likeRestaurant } from '../actions';
+import LikeButton from '../components/LikeButton'
 
 class RestaurantShow extends React.Component {
 
@@ -18,6 +21,9 @@ class RestaurantShow extends React.Component {
     this.props.fetchComments(this.props.match.params.restaurantId);
   }
 
+  handleOnClick = () => {
+    this.props.likeRestaurant(this.props.restaurant)
+  }
 
 
   render() {
@@ -38,19 +44,23 @@ class RestaurantShow extends React.Component {
             <span>Price: {restaurant.price_range}</span>
             <br></br>
             <span>Dress Code: {restaurant.dress_code}</span>
-
+<span>Likes: {restaurant.likes}</span>
           </div>
 
           <div>
             <Button
-              className="btn btn-outline-danger"
+              className="btn btn-sm btn-outline-danger"
               onClick={() => deleteRestaurant(restaurant.id, history)}
               >
               Delete Restaurant
             </Button>
-          </div>
 
 
+
+
+          <LikeButton restaurant={restaurant} likeRestaurant={this.handleOnClick} />
+
+        </div>
 
 
 
@@ -75,4 +85,4 @@ const mapStateToProps = (state, ownProps) => {
   })
 }
 
-export default connect(mapStateToProps, { fetchComments, fetchRestaurant,deleteRestaurant })(RestaurantShow);
+export default connect(mapStateToProps, { fetchComments, fetchRestaurant, deleteRestaurant, likeRestaurant })(RestaurantShow);
