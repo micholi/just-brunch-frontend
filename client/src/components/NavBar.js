@@ -45,6 +45,12 @@ const NavBar = () => {
         >
         Brunch Recommendations
       </NavLink>
+      <NavLink
+        to="/recipes"
+        style={link}
+        >
+        Recipes
+      </NavLink>
     </div>
   )
 }

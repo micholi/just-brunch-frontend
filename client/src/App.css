@@ -103,3 +103,23 @@
 .btn-md {
   display: inline;
 }
+
+.recipes {
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  border: 1px solid #D3D3D3;
+  font-size: 0.9em;
+}
+
+.recipes img {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.recipes li {
+  border-bottom: 1px dotted #D3D3D3;
+}
