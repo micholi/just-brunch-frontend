@@ -75,9 +75,9 @@ class RestaurantForm extends Component {
               onChange={this.handleOnChange}
               >
               <option value="select">select</option>
-              <option value="inexpensive">Inexpensive</option>
-              <option value="moderate">Moderate</option>
-              <option value="pricey">Pricey</option>
+              <option value="Inexpensive">Inexpensive</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Pricey">Pricey</option>
             </FormControl>
             <br></br>
 
