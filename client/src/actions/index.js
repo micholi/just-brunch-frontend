@@ -90,6 +90,19 @@ export const createRestaurant = (restaurant) => {
   }
 }
 
+export const deleteRestaurant = (restaurantId, routerHistory) => {
+  return dispatch => {
+    return fetch(`${API_URL}/restaurants/${restaurantId}`, {
+      method: "DELETE",
+    })
+    .then(response => {
+      dispatch(removeRestaurant(restaurantId));
+      routerHistory.replace('/restaurants')
+    })
+    .catch(error => console.log(error))
+  }
+}
+
 export const updateRestaurant = (restaurant) => {
   return dispatch => {
     return fetch(`${API_URL}/restaurants/${restaurant.id}`, {

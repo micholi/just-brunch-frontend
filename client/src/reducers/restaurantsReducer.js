@@ -35,7 +35,7 @@ export default (state = [], action) => {
 
 
     case 'REMOVE_RESTAURANT':
-      return {restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.restaurant)}
+      return state.filter(restaurant => restaurant.id !== action.id)
 
 
   default:

@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import { fetchRestaurant } from '../actions';
 import { fetchComments } from '../actions';
 import CommentsList from '../components/CommentsList';
-import CommentForm from '../components/CommentForm'
+import CommentForm from '../components/CommentForm';
+import { Button } from 'react-bootstrap';
+import { ButtonGroup } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 //import EditRestaurant from '../components/EditRestaurant'
+import { deleteRestaurant } from '../actions'
 
 class RestaurantShow extends React.Component {
 
@@ -15,8 +18,11 @@ class RestaurantShow extends React.Component {
     this.props.fetchComments(this.props.match.params.restaurantId);
   }
 
+
+
   render() {
-    const { restaurant, comments } = this.props;
+    const { restaurant, comments, deleteRestaurant, history } = this.props;
+
 
     return (
       <div className="show">
@@ -33,8 +39,15 @@ class RestaurantShow extends React.Component {
             <br></br>
             <span>Dress Code: {restaurant.dress_code}</span>
 
+          </div>
 
-
+          <div>
+            <Button
+              className="btn btn-outline-danger"
+              onClick={() => deleteRestaurant(restaurant.id, history)}
+              >
+              Delete Restaurant
+            </Button>
           </div>
 
 
@@ -62,4 +75,4 @@ const mapStateToProps = (state, ownProps) => {
   })
 }
 
-export default connect(mapStateToProps, { fetchComments, fetchRestaurant })(RestaurantShow);
+export default connect(mapStateToProps, { fetchComments, fetchRestaurant,deleteRestaurant })(RestaurantShow);
