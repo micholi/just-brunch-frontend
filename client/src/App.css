@@ -80,7 +80,7 @@ h5.restaurant-header a:hover, a:visited:hover {
   color: #B03B3F;
 }
 
-.show {
+.restaurant-show {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -94,7 +94,6 @@ h5.restaurant-header a:hover, a:visited:hover {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align: center;
 }
 
 .restaurant-body {
@@ -105,13 +104,18 @@ h5.restaurant-header a:hover, a:visited:hover {
   padding-bottom: 20px;
 }
 
-.show img {
+.restaurant-show img {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-
-
+.restaurant-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 /* ----- RESTAURANT FORM ----- */
 
@@ -161,6 +165,10 @@ h5.restaurant-header a:hover, a:visited:hover {
 
 .btn-md {
   display: inline;
+}
+
+.btn-sm {
+  margin-right: 10px;
 }
 
 .bottom-border {

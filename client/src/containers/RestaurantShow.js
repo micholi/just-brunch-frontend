@@ -2,17 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchRestaurant } from '../actions';
 import { fetchComments } from '../actions';
+import { deleteRestaurant } from '../actions';
+import { likeRestaurant } from '../actions';
 import CommentsList from '../components/CommentsList';
 import CommentForm from '../components/CommentForm';
+import LikeButton from '../components/LikeButton'
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
-
 import { Link } from 'react-router-dom';
-//import { updateRestaurant } from '../actions';
-import { deleteRestaurant } from '../actions';
-
-import { likeRestaurant } from '../actions';
-import LikeButton from '../components/LikeButton'
 
 class RestaurantShow extends React.Component {
 
@@ -28,9 +25,8 @@ class RestaurantShow extends React.Component {
   render() {
     const { restaurant, comments, deleteRestaurant, history } = this.props;
 
-
     return (
-      <div className="show">
+      <div className="restaurant-show">
         <div className="container-fluid">
           <h3 className="restaurant-header">{restaurant.name}</h3>
             <div className="restaurant-body">
@@ -47,14 +43,16 @@ class RestaurantShow extends React.Component {
           </div>
 
           <div className="restaurant-buttons">
-            <Button
-              className="btn btn-sm btn-outline-dark"
-              onClick={() => deleteRestaurant(restaurant.id, history)}
-              >
-              Delete Restaurant
-            </Button>
+            <ButtonGroup>
+              <Button
+                className="btn btn-sm btn-outline-dark"
+                onClick={() => deleteRestaurant(restaurant.id, history)}
+                >
+                Delete Restaurant
+              </Button>
 
-            <LikeButton restaurant={restaurant} likeRestaurant={this.handleOnClick} />
+              <LikeButton restaurant={restaurant} likeRestaurant={this.handleOnClick} />
+            </ButtonGroup>
           </div>
 
           <div className="bottom-border"></div>

@@ -32,7 +32,6 @@ class CommentForm extends Component {
   }
 
   render(){
-    console.log(this.props)
     return (
       <div className="comment-form">
       <h6>Add Comment</h6>
