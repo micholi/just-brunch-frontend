@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_193124) do
+ActiveRecord::Schema.define(version: 2018_08_20_215053) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_193124) do
     t.string "price_range"
     t.string "dress_code"
     t.string "image"
+    t.integer "likes"
   end
 
 end
