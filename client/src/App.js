@@ -21,6 +21,8 @@ class App extends Component {
 
             <Route exact path="/new" component={RestaurantForm} />
             <Route exact path="/restaurants" component={RestaurantsPage} />
+<Route exact path="/restaurants/:restaurantId/edit" component={EditRestaurant}/>
+
             <Route path="/restaurants/:restaurantId" component={RestaurantShow} />
 
             <Route path="/restaurants/:restaurantId/edit" component={EditRestaurant}/>

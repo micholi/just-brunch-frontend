@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { editRestaurant } from '../actions';
+import { updateRestaurant } from '../actions';
 import { FormControl, FormGroup } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 class EditRestaurant extends Component {
 
   constructor(props) {
-    super(props);
+    super();
+
+
+
 
     this.state = {
       id: props.restaurant.id,
@@ -32,11 +35,15 @@ class EditRestaurant extends Component {
     this.props.history.push('/restaurants')
   }
 
+
+
   render(){
+console.log(this.props)
+
     return (
       <div className="restaurant-form">
 
-      <p>TEST</p>
+
 
         <h5>Add Your Brunch Recommendation</h5>
         <form onSubmit={this.handleOnSubmit} >
@@ -115,4 +122,4 @@ class EditRestaurant extends Component {
   }
 }
 
-export default connect(null, { editRestaurant })(EditRestaurant)
+export default connect(null, { updateRestaurant })(EditRestaurant)

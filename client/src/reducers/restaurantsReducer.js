@@ -1,4 +1,5 @@
 export default (state = [], action) => {
+
   switch(action.type) {
 
     case 'LOADING_RESTAURANTS':
@@ -16,7 +17,9 @@ export default (state = [], action) => {
 
 
     case 'EDIT_RESTAURANT':
-      return state.restaurants.map((restaurant) => {
+
+
+      state.map((restaurant) => {
         if (restaurant.id === action.restaurant.id) {
           restaurant.name = action.restaurant.name
           restaurant.neighborhood = action.restaurant.neighborhood
@@ -26,7 +29,9 @@ export default (state = [], action) => {
           restaurant.image = action.restaurant.image
         }
       })
-      return {...state, restaurant: action.restaurant}
+
+
+      return action.restaurant
 
 
     case 'REMOVE_RESTAURANT':

@@ -29,8 +29,12 @@ class RestaurantsContainer extends React.Component {
             )}/>
 
           <Route exact path="/new" component={RestaurantForm} />
+
+<Route exact path={`${match.url}/:restaurantId/edit`} component={EditRestaurant}/>
+
           <Route exact path={`${match.url}/:restaurantId`} component={RestaurantShow} />
-          <Route exact path={`${match.url}/:restaurantId/edit`} component={EditRestaurant}/>
+
+
         </Switch>
       </div>
     )

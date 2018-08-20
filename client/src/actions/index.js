@@ -21,7 +21,7 @@ const addRestaurant = restaurant => {
   }
 }
 
-const updateRestaurant = restaurant => {
+const editRestaurant = restaurant => {
   return {
     type:'EDIT_RESTAURANT',
     restaurant
@@ -90,8 +90,23 @@ export const createRestaurant = (restaurant) => {
   }
 }
 
-export const editRestaurant = (restaurant) => {
-
+export const updateRestaurant = (restaurant) => {
+  return dispatch => {
+    return fetch(`${API_URL}/restaurants/${restaurant.id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({restaurant: restaurant})
+    })
+    .then(response => response.json())
+    .then(restaurant => {
+      dispatch(editRestaurant(restaurant))
+    })
+    .catch(error => {
+      dispatch({type: 'error'})
+    })
+  }
 }
 
 export const fetchComments = (restaurantId) => {
