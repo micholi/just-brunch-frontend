@@ -20,7 +20,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .welcome h2 {
@@ -37,6 +36,8 @@
   margin-right: 10px;
 }
 
+/* ----- NAVBAR ----- */
+
 .navbar-logo {
   font-family: 'Marmelad', sans-serif;
   font-size: 1.2em;
@@ -48,37 +49,12 @@
   font-size: 0.85em;
 }
 
-.restaurant-form {
-  min-width: 60%;
-  margin: auto;
-  border: 1px solid #D3D3D3;
-  margin-top: 35px;
-  padding: 25px;
-  font-size: 0.9em;
-  background-color: white;
-}
-
-.show {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #D3D3D3;
-  margin-top: 35px;
-  background-color: white;
-}
+/* ----- RESTAURANTS ----- */
 
 .restaurants-index {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.restaurant-header {
-  border-bottom: 1px solid black;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
 }
 
 .restaurant-card {
@@ -87,7 +63,11 @@
   margin-top: 35px;
   margin-right: 20px;
   padding: 15px;
+}
 
+.restaurant-card img {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 h5.restaurant-header a:link, a:visited {
@@ -100,6 +80,23 @@ h5.restaurant-header a:hover, a:visited:hover {
   color: #B03B3F;
 }
 
+.show {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #D3D3D3;
+  margin-top: 35px;
+  background-color: white;
+}
+
+.restaurant-header {
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
 .restaurant-body {
   display: block;
   margin-left: auto;
@@ -108,31 +105,37 @@ h5.restaurant-header a:hover, a:visited:hover {
   padding-bottom: 20px;
 }
 
-.restaurant-card img {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .show img {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.bottom-border {
-  border-bottom: 1px solid black;
+
+
+
+/* ----- RESTAURANT FORM ----- */
+
+.restaurant-form {
+  min-width: 60%;
+  margin: auto;
+  border: 1px solid #D3D3D3;
+  margin-top: 35px;
+  padding: 25px;
+  font-size: 0.9em;
+  background-color: white;
+}
+
+/* ----- COMMENTS ----- */
+
+.comment-form {
+  margin-top: 20px;
 }
 
 .comments {
   margin-top: 20px;
 }
 
-.comment-form {
-  margin-top: 20px;
-}
-
-.btn-md {
-  display: inline;
-}
+/* ----- RECIPES ----- */
 
 .recipes {
   margin-top: 35px;
@@ -152,4 +155,14 @@ h5.restaurant-header a:hover, a:visited:hover {
 
 .recipes li {
   border-bottom: 1px dotted #D3D3D3;
+}
+
+/* ----- MISC ----- */
+
+.btn-md {
+  display: inline;
+}
+
+.bottom-border {
+  border-bottom: 1px solid black;
 }
