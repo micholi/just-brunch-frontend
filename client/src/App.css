@@ -49,7 +49,7 @@
 }
 
 .restaurant-form {
-  width: 50%;
+  min-width: 60%;
   margin: auto;
   border: 1px solid #D3D3D3;
   margin-top: 35px;
@@ -59,11 +59,18 @@
 }
 
 .show {
-  min-width: 600px;
-  margin: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #D3D3D3;
   margin-top: 35px;
   background-color: white;
+}
+
+.restaurants-index {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .restaurant-header {
@@ -74,12 +81,36 @@
   text-align: center;
 }
 
+.restaurant-card {
+  width: 300px;
+  border: 1px solid #D3D3D3;
+  margin-top: 35px;
+  margin-right: 20px;
+  padding: 15px;
+
+}
+
+h5.restaurant-header a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+h5.restaurant-header a:hover, a:visited:hover {
+  text-decoration: none;
+  color: #B03B3F;
+}
+
 .restaurant-body {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   padding-bottom: 20px;
+}
+
+.restaurant-card img {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .show img {

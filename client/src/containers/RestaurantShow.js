@@ -18,10 +18,9 @@ class RestaurantShow extends React.Component {
     return (
       <div className="show">
         <div className="container-fluid">
-
           <h3 className="restaurant-header">{restaurant.name}</h3>
             <div className="restaurant-body">
-            <img src={restaurant.image} width="300" height="250" alt="pic" />
+            <img src={restaurant.image} width="100%" height="75%" alt="pic" />
             <br></br>
             <span>Neighborhood: {restaurant.neighborhood}</span>
             <br></br>
@@ -35,6 +34,7 @@ class RestaurantShow extends React.Component {
 
           <CommentsList comments={comments} />
           <CommentForm restaurantId={restaurant.id} />
+
         </div>
       </div>
 

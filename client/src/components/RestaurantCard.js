@@ -8,15 +8,18 @@ class RestaurantCard extends Component {
 
     return (
 
-      <div className="border border-secondary" style={{ marginTop: '35px', padding: 15, marginRight: 20, width: 300}}>
+      <div className="restaurant-card">
         <div className="container-fluid text-center">
-          <h4><Link key={this.props.restaurant.id} to={`/restaurants/${this.props.restaurant.id}`}>{this.props.restaurant.name}</Link></h4>
+          <h5 className="restaurant-header"><Link key={this.props.restaurant.id} to={`/restaurants/${this.props.restaurant.id}`}>{this.props.restaurant.name}</Link></h5>
 
-          <img src={this.props.restaurant.image} width="100" height="100" alt="pic" />
+          <img src={this.props.restaurant.image} width="125" height="100" alt="pic" />
+          <br></br>
+        
+          <span className="bold-text">Cuisine: {this.props.restaurant.cuisine}</span>
+          <br></br>
+          <span className="bold-text">Neighborhood: {this.props.restaurant.neighborhood}</span>
           <br></br>
           <br></br>
-          <p>Cuisine: {this.props.restaurant.cuisine}</p>
-          <p>Neighborhood: {this.props.restaurant.neighborhood}</p>
           <button type="button" className="btn btn-sm btn-outline-secondary">View Details</button>
           </div>
       </div>

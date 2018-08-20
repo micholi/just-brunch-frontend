@@ -21,9 +21,11 @@ const RestaurantsList = ({ restaurants }) => {
   );
 
     return (
-      <div className="container">
-        <div className="row">
-          {renderRestaurants}
+      <div className="restaurants-index">
+        <div className="container-fluid">
+          <div className="row">
+            {renderRestaurants}
+          </div>
         </div>
       </div>
     )
