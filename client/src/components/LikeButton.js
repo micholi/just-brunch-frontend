@@ -10,7 +10,7 @@ class LikeButton extends React.Component {
         <Button
           className="btn btn-sm btn-outline-danger"
           onClick={this.props.likeRestaurant}>
-          Add Yum
+          &#9829; Yum!
           <Badge>{this.props.restaurant.likes}</Badge>
         </Button>
       </div>

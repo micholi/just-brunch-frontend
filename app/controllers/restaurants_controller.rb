@@ -21,6 +21,12 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def update
+    if @restaurant.update(restaurant_params)
+      render json: @restaurant
+    end
+  end
+
   def destroy
     @restaurant.destroy
   end
