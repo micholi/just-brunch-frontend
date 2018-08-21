@@ -16,13 +16,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/new" component={RestaurantForm} />
-            <Route exact path="/restaurants" component={RestaurantsPage} />
-            <Route path="/restaurants/:restaurantId" component={RestaurantShow} />
-            <Route path="/recipes" component={Recipes} />
-          </Switch>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/new" component={RestaurantForm} />
+              <Route exact path="/restaurants" component={RestaurantsPage} />
+              <Route path="/restaurants/:restaurantId" component={RestaurantShow} />
+              <Route path="/recipes" component={Recipes} />
+            </Switch>
         </div>
       </Router>
     );

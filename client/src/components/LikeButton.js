@@ -8,7 +8,7 @@ class LikeButton extends React.Component {
     return (
       <div>
         <Button
-          className="btn btn-sm btn-outline-danger"
+          className="btn btn-sm btn-outline-dark"
           onClick={this.props.likeRestaurant}>
           Mmm... Brunch!
           <Badge>{this.props.restaurant.likes}</Badge>

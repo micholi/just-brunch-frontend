@@ -101,7 +101,6 @@ h5.restaurant-header a:hover, a:visited:hover {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  padding-bottom: 20px;
 }
 
 .restaurant-show img {
@@ -113,8 +112,8 @@ h5.restaurant-header a:hover, a:visited:hover {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* ----- RESTAURANT FORM ----- */
@@ -133,10 +132,14 @@ h5.restaurant-header a:hover, a:visited:hover {
 
 .comment-form {
   margin-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .comments {
   margin-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 /* ----- RECIPES ----- */

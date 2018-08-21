@@ -2,8 +2,15 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // note button link not yet functional
-class RestaurantCard extends Component {
+import LikeButton from '../components/LikeButton'
+import { Button } from 'react-bootstrap';
+import { ButtonGroup } from 'react-bootstrap';
+import { likeRestaurant } from '../actions';
 
+class RestaurantCard extends Component {
+  handleOnClick = () => {
+    this.props.likeRestaurant(this.props.restaurant)
+  }
   render() {
 
     return (
@@ -14,17 +21,19 @@ class RestaurantCard extends Component {
 
           <img src={this.props.restaurant.image} width="125" height="100" alt="pic" />
           <br></br>
-        
+
           <span className="bold-text">Cuisine: {this.props.restaurant.cuisine}</span>
           <br></br>
           <span className="bold-text">Neighborhood: {this.props.restaurant.neighborhood}</span>
           <br></br>
           <br></br>
-          <button type="button" className="btn btn-sm btn-outline-secondary">View Details</button>
+          
+          <LikeButton restaurant={this.props.restaurant} likeRestaurant={this.handleOnClick} />
           </div>
       </div>
     )
   }
 }
 
-export default RestaurantCard;
+//export default RestaurantCard;
+export default connect(null, { likeRestaurant })(RestaurantCard);

@@ -39,16 +39,15 @@ class RestaurantShow extends React.Component {
             <span>Price: {restaurant.price_range}</span>
             <br></br>
             <span>Dress Code: {restaurant.dress_code}</span>
-            <br></br>
           </div>
 
           <div className="restaurant-buttons">
             <ButtonGroup>
               <Button
-                className="btn btn-sm btn-outline-dark"
+                className="btn btn-sm btn-outline-secondary"
                 onClick={() => deleteRestaurant(restaurant.id, history)}
                 >
-                Delete Restaurant
+                Delete
               </Button>
 
               <LikeButton restaurant={restaurant} likeRestaurant={this.handleOnClick} />
@@ -62,7 +61,6 @@ class RestaurantShow extends React.Component {
 
         </div>
       </div>
-
     )
   }
 }
