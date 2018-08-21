@@ -4,7 +4,7 @@
 .App {
   font-family: 'Lato', sans-serif;
   color: black;
-  background-color: #F9F8F8;
+  background-color: #E5E5E8;
 }
 
 /* ----- HOME PAGE ----- */
@@ -70,6 +70,7 @@
   margin-top: 35px;
   margin-right: 20px;
   padding: 15px;
+  background-color: white;
 }
 
 .restaurant-card img {

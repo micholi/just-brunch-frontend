@@ -4,7 +4,7 @@ import { createRestaurant } from '../actions';
 import { FormControl, FormGroup } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
-class RestaurantForm extends Component {
+class RestaurantNew extends Component {
 
   constructor() {
     super();
@@ -111,4 +111,4 @@ class RestaurantForm extends Component {
   }
 }
 
-export default connect(null, { createRestaurant })(RestaurantForm)
+export default connect(null, { createRestaurant })(RestaurantNew)

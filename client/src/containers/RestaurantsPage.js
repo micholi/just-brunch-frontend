@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from './RestaurantShow';
-import RestaurantForm from '../components/RestaurantForm';
+import RestaurantNew from './RestaurantNew';
 import RestaurantCard from '../components/RestaurantCard';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ class RestaurantsContainer extends React.Component {
               <RestaurantsList restaurants={restaurants} />
             )}/>
 
-          <Route exact path="/new" component={RestaurantForm} />
+          <Route exact path="/new" component={RestaurantNew} />
           <Route path={`${match.url}/:restaurantId`} component={RestaurantShow} />
         </Switch>
       </div>
