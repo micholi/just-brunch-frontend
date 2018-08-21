@@ -23,7 +23,7 @@ const NavBar = () => {
         style={link}
         className="navbar-link"
         >
-        Brunch Recs
+        Where to Eat
       </NavLink>
       <NavLink
         to="/new"
@@ -37,7 +37,7 @@ const NavBar = () => {
         style={link}
         className="navbar-link"
         >
-        Recipes
+        Brunch Recipes
       </NavLink>
     </div>
   )

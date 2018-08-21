@@ -34,7 +34,7 @@ class CommentNew extends Component {
   render(){
     return (
       <div className="comment-form">
-      <h6>Add Comment</h6>
+      <p className="bold-text">Add Comment</p>
         <form onSubmit={this.handleOnSubmit} >
 
           <FormGroup>

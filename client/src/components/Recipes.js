@@ -4,7 +4,7 @@ import pancakes from './pancakes.jpeg'
 const Recipes = () => {
   return (
     <div className="recipes">
-      <h3>Recipes - Coming Soon!</h3>
+      <h3>Brunch Recipes - Coming Soon!</h3>
       <p>Hosting a brunch at home? Soon, you can share recipes and hosting tips with fellow brunch lovers.
       <br></br>
       In the meantime, please enjoy this recipe!</p>

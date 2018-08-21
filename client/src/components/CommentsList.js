@@ -10,7 +10,7 @@ const CommentsList = ({ comments }) => {
 
   return (
     <div className="comments">
-      <p>Comments:</p>
+      <p className="bold-text">Comments:</p>
       <ListGroup>
         {renderComments}
       </ListGroup>

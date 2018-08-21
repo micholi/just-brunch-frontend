@@ -5,7 +5,7 @@ import { fetchComments } from '../actions';
 import { deleteRestaurant } from '../actions';
 import { likeRestaurant } from '../actions';
 import CommentsList from '../components/CommentsList';
-import CommentNew from './CommentNew';
+import CommentNew from '../components/CommentNew';
 import LikeButton from '../components/LikeButton'
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
