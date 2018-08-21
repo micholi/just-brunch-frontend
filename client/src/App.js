@@ -5,7 +5,6 @@ import Home from './components/Home';
 import RestaurantForm from './components/RestaurantForm';
 import RestaurantShow from './containers/RestaurantShow';
 import RestaurantsPage from './containers/RestaurantsPage';
-//import EditRestaurant from './components/EditRestaurant';
 import Recipes from './components/Recipes';
 import './App.css'
 

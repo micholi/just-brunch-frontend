@@ -6,8 +6,6 @@ import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from './RestaurantShow';
 import RestaurantForm from '../components/RestaurantForm';
 import RestaurantCard from '../components/RestaurantCard';
-
-//import EditRestaurant from '../components/EditRestaurant';
 import { Link } from 'react-router-dom';
 
 class RestaurantsContainer extends React.Component {

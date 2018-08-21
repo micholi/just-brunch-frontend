@@ -21,13 +21,6 @@ const addRestaurant = restaurant => {
   }
 }
 
-const editRestaurant = restaurant => {
-  return {
-    type:'EDIT_RESTAURANT',
-    restaurant
-  }
-}
-
 const addLikes = restaurant => {
   return {
     type: 'LIKE_RESTAURANT',
@@ -125,25 +118,6 @@ export const deleteRestaurant = (restaurantId, routerHistory) => {
       routerHistory.replace('/restaurants')
     })
     .catch(error => console.log(error))
-  }
-}
-
-export const updateRestaurant = (restaurant) => {
-  return dispatch => {
-    return fetch(`${API_URL}/restaurants/${restaurant.id}`, {
-      method: "PATCH",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({restaurant: restaurant})
-    })
-    .then(response => response.json())
-    .then(restaurant => {
-      dispatch(editRestaurant(restaurant))
-    })
-    .catch(error => {
-      dispatch({type: 'error'})
-    })
   }
 }
 
