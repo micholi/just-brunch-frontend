@@ -34,5 +34,4 @@ class RestaurantCard extends Component {
   }
 }
 
-//export default RestaurantCard;
 export default connect(null, { likeRestaurant })(RestaurantCard);

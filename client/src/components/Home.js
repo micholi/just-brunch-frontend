@@ -2,7 +2,7 @@ import React from 'react';
 import brunch2 from './brunch2.jpg'
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-// note button link not yet functional
+
 const Home = () => {
 
   return (

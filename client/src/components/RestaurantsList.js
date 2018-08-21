@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard from '../containers/RestaurantCard';
 
 const RestaurantsList = ({ restaurants }) => {
 

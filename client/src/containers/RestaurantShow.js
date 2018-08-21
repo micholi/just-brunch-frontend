@@ -9,7 +9,6 @@ import CommentForm from '../components/CommentForm';
 import LikeButton from '../components/LikeButton'
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
-//import { Link } from 'react-router-dom';
 
 class RestaurantShow extends React.Component {
 
