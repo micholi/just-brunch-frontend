@@ -197,3 +197,12 @@ h5.restaurant-header a:hover, a:visited:hover {
 .bottom-border {
   border-bottom: 1px solid black;
 }
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italics {
+  font-style: italic;
+  font-size: 0.9em;
+}

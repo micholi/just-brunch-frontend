@@ -23,9 +23,9 @@ class RestaurantCard extends Component {
           <img src={this.props.restaurant.image} width="125" height="100" alt="pic" />
           <br></br>
 
-          <span className="bold-text">Cuisine: {this.props.restaurant.cuisine}</span>
+          <span className="bold-text">Cuisine: </span>{this.props.restaurant.cuisine}
           <br></br>
-          <span className="bold-text">Neighborhood: {this.props.restaurant.neighborhood}</span>
+          <span className="bold-text">Neighborhood: </span>{this.props.restaurant.neighborhood}
           <br></br>
           <br></br>
 

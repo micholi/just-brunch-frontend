@@ -35,13 +35,13 @@ class RestaurantShow extends React.Component {
             <div className="restaurant-body">
             <img src={restaurant.image} width="100%" height="75%" alt="pic" />
             <br></br>
-            <span>Neighborhood: {restaurant.neighborhood}</span>
+            <span className="bold-text">Neighborhood: </span>{restaurant.neighborhood}
             <br></br>
-            <span>Cuisine: {restaurant.cuisine}</span>
+            <span className="bold-text">Cuisine: </span>{restaurant.cuisine}
             <br></br>
-            <span>Price: {restaurant.price_range}</span>
+            <span className="bold-text">Price: </span>{restaurant.price_range}
             <br></br>
-            <span>Dress Code: {restaurant.dress_code}</span>
+            <span className="bold-text">Dress Code: </span>{restaurant.dress_code}
           </div>
 
           <div className="restaurant-buttons">
