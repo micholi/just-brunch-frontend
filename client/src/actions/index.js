@@ -80,7 +80,7 @@ export const createRestaurant = (restaurant) => {
       body: JSON.stringify({restaurant: restaurant})
     })
     .then(response => response.json())
-    .then(handleErrors)
+//    .then(handleErrors)
     .then(restaurant => {
       dispatch(addRestaurant(restaurant))
     })

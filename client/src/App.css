@@ -172,6 +172,18 @@ h5.restaurant-header a:hover, a:visited:hover {
   border-bottom: 1px dotted #D3D3D3;
 }
 
+/* ----- FOOTER ----- */
+
+.footer {
+  color: #606060;
+  font-size: 0.85em;
+  text-align: center;
+  border-top: 1px solid #D3D3D3;
+  margin-top: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 /* ----- MISC ----- */
 
 .btn-md {
