@@ -79,8 +79,8 @@ export const createRestaurant = (restaurant) => {
       },
       body: JSON.stringify({restaurant: restaurant})
     })
-    //.then(handleErrors)
     .then(response => response.json())
+    .then(handleErrors)
     .then(restaurant => {
       dispatch(addRestaurant(restaurant))
     })
@@ -125,7 +125,7 @@ export const fetchComments = (restaurantId) => {
   return dispatch => {
     dispatch({type: 'LOADING_COMMENTS'});
       return fetch(`${API_URL}/restaurants/${restaurantId}/comments`)
-      .then(resp => resp.json())
+      .then(response => response.json())
       .then(comments => dispatch(setComments(comments)))
       .catch(error => console.log(error))
   }

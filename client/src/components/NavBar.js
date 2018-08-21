@@ -1,14 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const link = {
-  width: '100px',
-  padding: '12px',
-  margin: '0 6px 6px',
-  textDecoration: 'none',
-  color: 'white',
-}
-
 const NavBar = () => {
   return (
     <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px', color: 'black', textDecoration: 'none' }}>
@@ -27,18 +19,11 @@ const NavBar = () => {
         <span className="navbar-link">Home</span>
       </NavLink>
       <NavLink
-        to="/"
-        style={link}
-        className="navbar-link"
-        >
-        About
-      </NavLink>
-      <NavLink
         to="/restaurants"
         style={link}
         className="navbar-link"
         >
-        Brunch Recommendations
+        Brunch Recs
       </NavLink>
       <NavLink
         to="/new"
@@ -56,6 +41,14 @@ const NavBar = () => {
       </NavLink>
     </div>
   )
+}
+
+const link = {
+  width: '100px',
+  padding: '12px',
+  margin: '0 6px 6px',
+  textDecoration: 'none',
+  color: 'white',
 }
 
 export default NavBar;

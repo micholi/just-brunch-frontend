@@ -18,19 +18,6 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
       render json: @restaurant
-    # else
-      # figure out how to handle error messages
-    end
-  end
-
-  def edit
-  end
-
-  def update
-    if @restaurant.update(restaurant_params)
-      render json: @restaurant
-    # else
-      # figure out how to handle error messages
     end
   end
 
