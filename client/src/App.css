@@ -28,12 +28,19 @@
   text-align: center;
 }
 
-.text-box {
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #D6D6D6;
+.welcome-text {
+  font-size: 1.3em;
+  color: white;
   padding: 10px 15px;
   margin-right: 10px;
+}
+
+.welcome a.home-button {
+  color: white;
+}
+
+.welcome a.visited:hover.home-button {
+  color: white;
 }
 
 /* ----- NAVBAR ----- */

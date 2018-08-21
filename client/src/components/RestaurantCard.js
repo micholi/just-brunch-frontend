@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-// note button link not yet functional
 import LikeButton from '../components/LikeButton'
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
@@ -27,7 +26,7 @@ class RestaurantCard extends Component {
           <span className="bold-text">Neighborhood: {this.props.restaurant.neighborhood}</span>
           <br></br>
           <br></br>
-          
+
           <LikeButton restaurant={this.props.restaurant} likeRestaurant={this.handleOnClick} />
           </div>
       </div>
