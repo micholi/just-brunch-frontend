@@ -11,7 +11,7 @@ const Recipes = () => {
 
       <h4>Lemon-Ricotta Pancakes</h4>
       <p>Recipe courtesy of Giada De Laurentiis</p>
-      <img src={pancakes} width="400" height="300" />
+      <img src={pancakes} width="400" height="300" alt="pancakes"/>
       <div className="row">
         <div className="col-md-4">
           <h5>Ingredients</h5>

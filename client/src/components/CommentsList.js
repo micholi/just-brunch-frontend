@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentShow from './CommentShow';
-import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 
 const CommentsList = ({ comments }) => {

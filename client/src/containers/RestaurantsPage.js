@@ -1,12 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from './RestaurantShow';
 import RestaurantNew from './RestaurantNew';
-import RestaurantCard from './RestaurantCard';
-import { Link } from 'react-router-dom';
 
 class RestaurantsContainer extends React.Component {
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createRestaurant } from '../actions';
 import { FormControl, FormGroup } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom';
 
 class RestaurantNew extends Component {
 
