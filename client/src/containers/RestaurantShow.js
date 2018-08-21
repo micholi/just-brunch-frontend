@@ -43,7 +43,7 @@ class RestaurantShow extends React.Component {
           <div className="restaurant-buttons">
             <ButtonGroup>
               <Button
-                className="btn btn-sm btn-outline-secondary"
+                className="btn btn-sm btn-outline-dark"
                 onClick={() => deleteRestaurant(restaurant.id, history)}
                 >
                 Delete
