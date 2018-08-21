@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createComment } from '../actions';
 import { FormControl, FormGroup } from 'react-bootstrap';
 
-class CommentForm extends Component {
+class CommentNew extends Component {
 
   constructor(props) {
     super(props);
@@ -67,4 +67,4 @@ class CommentForm extends Component {
   }
 }
 
-export default connect(null, { createComment })(CommentForm)
+export default connect(null, { createComment })(CommentNew)

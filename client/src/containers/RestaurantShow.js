@@ -5,7 +5,7 @@ import { fetchComments } from '../actions';
 import { deleteRestaurant } from '../actions';
 import { likeRestaurant } from '../actions';
 import CommentsList from '../components/CommentsList';
-import CommentForm from '../components/CommentForm';
+import CommentNew from './CommentNew';
 import LikeButton from '../components/LikeButton'
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
@@ -56,7 +56,7 @@ class RestaurantShow extends React.Component {
           <div className="bottom-border"></div>
 
           <CommentsList comments={comments} />
-          <CommentForm restaurantId={this.props.match.params.restaurantId} />
+          <CommentNew restaurantId={this.props.match.params.restaurantId} />
 
         </div>
       </div>
