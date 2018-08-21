@@ -2,14 +2,16 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import LikeButton from '../components/LikeButton'
+import { likeRestaurant } from '../actions';
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
-import { likeRestaurant } from '../actions';
 
 class RestaurantCard extends Component {
+
   handleOnClick = () => {
     this.props.likeRestaurant(this.props.restaurant)
   }
+
   render() {
 
     return (
@@ -27,8 +29,16 @@ class RestaurantCard extends Component {
           <br></br>
           <br></br>
 
-          <LikeButton restaurant={this.props.restaurant} likeRestaurant={this.handleOnClick} />
-          </div>
+          <ButtonGroup>
+            <Link key={this.props.restaurant.id} to={`/restaurants/${this.props.restaurant.id}`}>
+              <Button className="btn btn-sm btn-outline-dark">
+                More Info
+              </Button>
+            </Link>
+            <LikeButton restaurant={this.props.restaurant} likeRestaurant={this.handleOnClick} />
+          </ButtonGroup>
+
+        </div>
       </div>
     )
   }

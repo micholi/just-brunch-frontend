@@ -34,18 +34,18 @@ const NavBar = () => {
         About
       </NavLink>
       <NavLink
-        to="/new"
-        style={link}
-        className="navbar-link"
-        >
-        Add Brunch Spot
-      </NavLink>
-      <NavLink
         to="/restaurants"
         style={link}
         className="navbar-link"
         >
         Brunch Recommendations
+      </NavLink>
+      <NavLink
+        to="/new"
+        style={link}
+        className="navbar-link"
+        >
+        Add Brunch Spot
       </NavLink>
       <NavLink
         to="/recipes"
