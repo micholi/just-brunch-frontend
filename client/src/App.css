@@ -65,6 +65,14 @@
   align: center;
 }
 
+.filter {
+  margin-top: 35px;
+}
+
+.filter-label {
+  padding-right: 10px;
+}
+
 .restaurant-card {
   width: 300px;
   border: 1px solid #D3D3D3;
@@ -162,7 +170,7 @@ h5.restaurant-header a:hover, a:visited:hover {
   width: 70%;
   background-color: white;
   border: 1px solid #D3D3D3;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .recipes img {

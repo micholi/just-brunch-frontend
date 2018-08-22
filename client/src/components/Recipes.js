@@ -4,13 +4,13 @@ import pancakes from './pancakes.jpeg'
 const Recipes = () => {
   return (
     <div className="recipes">
-      <h3>Brunch Recipes - Coming Soon!</h3>
+      <h3>Share Brunch Recipes - <span className="italics">Coming Soon!</span></h3>
       <p>Hosting a brunch at home? Soon, you can share recipes and hosting tips with fellow brunch lovers.
       <br></br>
-      In the meantime, please enjoy this recipe!</p>
+      Until then, please enjoy the recipe below!</p>
 
       <h4>Lemon-Ricotta Pancakes</h4>
-      <p>Recipe courtesy of Giada De Laurentiis</p>
+      <p className="italics">Recipe courtesy of Giada De Laurentiis</p>
       <img src={pancakes} width="400" height="300" alt="pancakes"/>
       <div className="row">
         <div className="col-md-4">

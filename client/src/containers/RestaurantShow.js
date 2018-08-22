@@ -21,10 +21,6 @@ class RestaurantShow extends React.Component {
     this.props.likeRestaurant(this.props.restaurant)
   }
 
-  handleCommentsClick = () => {
-    this.props.fetchComments(this.props.match.params.restaurantId)
-  }
-
   render() {
     const { restaurant, comments, deleteRestaurant, history } = this.props;
 
