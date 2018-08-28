@@ -14,18 +14,20 @@ class RestaurantCard extends Component {
 
   render() {
 
+    const { restaurant } = this.props
+
     return (
 
       <div className="restaurant-card">
         <div className="container-fluid text-center">
-          <h5 className="restaurant-header"><Link key={this.props.restaurant.id} to={`/restaurants/${this.props.restaurant.id}`}>{this.props.restaurant.name}</Link></h5>
+          <h5 className="restaurant-header"><Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link></h5>
 
-          <img src={this.props.restaurant.image} width="125" height="100" alt="pic" />
+          <img src={restaurant.image} width="125" height="100" alt="pic" />
           <br></br>
 
-          <span className="bold-text">Cuisine: </span>{this.props.restaurant.cuisine}
+          <span className="bold-text">Cuisine: </span>{restaurant.cuisine}
           <br></br>
-          <span className="bold-text">Neighborhood: </span>{this.props.restaurant.neighborhood}
+          <span className="bold-text">Neighborhood: </span>{restaurant.neighborhood}
           <br></br>
           <br></br>
 
