@@ -12,7 +12,7 @@ class RestaurantsList extends React.Component {
     }
   }
 
-  renderRestaurants = (restaurants) => {  
+  renderRestaurants = (restaurants) => {
     restaurants.sort(function(a, b) {
       var nameA = a.name.toUpperCase();
       var nameB = b.name.toUpperCase();

@@ -4,7 +4,7 @@ const PriceFilter = (props) => {
 
   return (
     <div className="filter">
-      <span className="filter-label">Filter Restaurants by Price:</span>
+      <span className="filter-label">Filter Restaurants by Price Range:</span>
 
       <span className="filter-label"><label htmlFor='all'>All:</label>
       <input type="radio" name='priceFilter' id='all' value='All' onChange={props.handleChange} /></span>
