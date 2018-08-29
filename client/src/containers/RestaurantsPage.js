@@ -23,8 +23,6 @@ class RestaurantsContainer extends React.Component {
           <Route exact path={match.url} render={() => (
               <RestaurantsList restaurants={restaurants} />
             )}/>
-
-          <Route exact path="/new" component={RestaurantNew} />
           <Route path={`${match.url}/:restaurantId`} component={RestaurantShow} />
         </Switch>
       </div>
