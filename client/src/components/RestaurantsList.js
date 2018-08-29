@@ -14,15 +14,7 @@ class RestaurantsList extends React.Component {
 
   renderRestaurants = (restaurants) => {
     restaurants.sort(function(a, b) {
-      var nameA = a.name.toUpperCase();
-      var nameB = b.name.toUpperCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-        return 0;
+      return b.likes - a.likes
       })
      return restaurants.map(restaurant => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)
   }
