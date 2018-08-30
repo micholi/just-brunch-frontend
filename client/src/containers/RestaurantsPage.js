@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import { fetchRestaurants } from '../actions';
 import RestaurantsList from '../components/RestaurantsList'
 import RestaurantShow from './RestaurantShow';
-import RestaurantNew from './RestaurantNew';
 
 class RestaurantsContainer extends React.Component {
 
