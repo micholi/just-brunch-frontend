@@ -25,13 +25,14 @@ class RestaurantsList extends React.Component {
     return restaurants.map(restaurant => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)
   }
 
-  filteredRestaurants = () => {
+  restaurantFilter = () => {
+    let filteredList = ""
     if (this.state.priceFilter === 'All') {
-      return this.props.restaurants
+      filteredList = this.props.restaurants
     } else {
-      const filtered = this.props.restaurants.filter(restaurant => this.state.priceFilter === restaurant.price_range);
-      return filtered;
+      filteredList = this.props.restaurants.filter(restaurant => this.state.priceFilter === restaurant.price_range);
     }
+    return filteredList
   }
 
   handleFilterChange = (event) => {
@@ -58,7 +59,7 @@ class RestaurantsList extends React.Component {
           <div className="container-fluid">
             <div className="row">
             <br />
-              {this.renderRestaurants(this.filteredRestaurants())}
+              {this.renderRestaurants(this.restaurantFilter())}
           </div>
         </div>
       </div>
