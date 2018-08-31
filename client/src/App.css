@@ -134,6 +134,10 @@ h5.restaurant-header a:hover, a:visited:hover {
   margin-bottom: 20px;
 }
 
+.sort-button {
+  margin-left: 10px;
+}
+
 /* ----- RESTAURANT FORM ----- */
 
 .restaurant-form {
