@@ -24,7 +24,6 @@ class CommentNew extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.createComment(this.state);
-    console.log(this.state)
     this.setState({
     content: '',
     commenter: ''
