@@ -11,7 +11,7 @@ class CommentNew extends Component {
     this.state = {
       content: '' ,
       commenter: '',
-      restaurant_id: +this.props.restaurantId
+      restaurant_id: this.props.restaurantId
     };
   }
 
